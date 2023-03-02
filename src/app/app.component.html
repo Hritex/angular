@@ -1,1 +1,17 @@
-<h1>This is my-app.</h1>
+<h2>This is my-drag-app.</h2>
+
+<h3>Fruits</h3>
+<hr>
+<div cdkDropList (cdkDropListDropped)="drop($event)">
+<div *ngFor="let fruit of fruits" cdkDrag>
+  {{ fruit.name }}
+</div>
+</div>
+<hr>
+<h3>Colors</h3>
+<hr>
+<div cdkDropList (cdkDropListDropped)="dropC($event)">
+  <div *ngFor="let col of colors" cdkDrag>
+    {{ col.color }}
+  </div>
+  </div>
