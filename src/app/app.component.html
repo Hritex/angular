@@ -30,6 +30,16 @@
         <li>Starting at the 5th log item give all future log items a blue background (via ngStyle) and white color (ngClass)</li>
       </ol>
       <hr>
+      <!-- <button (click)="showSecret = !showSecret" class="btn btn-primary">Display Details</button> -->
+      <button (click)="onToggleDetails()" class="btn btn-primary">Display Details</button>
+      <p *ngIf="showSecret">Secret Password = energy</p>
+      <div 
+      *ngFor = "let logItem of log; let i = index"
+      [ngStyle]="{backgroundColor: i >= 4 ? 'blue' : 'transparent'}"
+      [ngClass]="{'white-text': i >= 4}"
+      >
+      {{ logItem }}
+    </div>            
     </div>
   </div>
 </div>
