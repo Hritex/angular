@@ -1,24 +1,31 @@
-<h2>This is my-drag-app.</h2>
+<h3>This is my-drag-app.</h3>
 
-<h3>Fruits</h3>
-<hr>
-<div cdkDropList (cdkDropListDropped)="drop($event)">
-<div *ngFor="let fruit of fruits" cdkDrag>
-  {{ fruit.name }}
+<div class="container">
+<div class="row">
+  <div class="col-xm-5">
+    <h4>Fruits</h4>
+    <hr>
+      <div cdkDropList (cdkDropListDropped)="drop($event)">
+        <div *ngFor="let fruit of fruits" cdkDrag>
+          {{ fruit.name }}
+      </div>
+    </div>
+    <hr>
+    <h4>Colors</h4>
+    <hr>
+    <div cdkDropList (cdkDropListDropped)="dropC($event)">
+      <div *ngFor="let col of colors" cdkDrag>
+        {{ col.color }}
+      </div>
+    </div>
+  </div>
 </div>
 </div>
 <hr>
-<h3>Colors</h3>
 <hr>
-<div cdkDropList (cdkDropListDropped)="dropC($event)">
-  <div *ngFor="let col of colors" cdkDrag>
-    {{ col.color }}
-  </div>
-  </div>
-  <hr><hr>
 
 
-<h2>Assignment 3</h2>
+<h3>Assignment 3</h3>
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
@@ -36,7 +43,15 @@
         <li>Simply output Odd - NUMBER or Even - NUMBER in the two components</li>
         <li>Stle the element (e.g. paragraph) holding your output text differently in both components.</li>
       </ol>
-      <hr>          
+      <hr>
     </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+      <app-game></app-game>
+      <app-odd></app-odd>
+      <app-even></app-even>
   </div>
 </div>
