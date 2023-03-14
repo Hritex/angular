@@ -50,7 +50,7 @@
 
 <div class="row">
   <div class="col-md-4">
-      <app-game></app-game>
+      <app-game (gameStart)="onGameStarted($event)"></app-game>
       <app-odd></app-odd>
       <app-even></app-even>
   </div>

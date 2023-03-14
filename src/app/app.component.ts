@@ -112,4 +112,10 @@ export class AppComponent {
     
     moveItemInArray(this.colors, event.previousIndex, event.currentIndex);
   }
+
+
+
+  onGameStarted(eventData: any){
+    console.log(eventData.target.innerHTML);
+  }
 }
