@@ -17,6 +17,13 @@ export class GameComponent {
     }, 1000)
   }
 
+  onPauseGame() {
+    if (this.interval)
+    {
+      clearInterval(this.interval);
+    }
+  }
+
   // @Output() gameStarted = new EventEmitter<{count: number}>();
 
   // cnt = 0;
