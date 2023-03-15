@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-odd',
@@ -6,11 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./odd.component.css']
 })
 export class OddComponent {
-  ref: number | any;
+  @Input() number: number | any;
 
-  onGameStarted(eventData: any){
-    console.log(eventData.target.innerHTML);
-    this.ref = eventData.target.innerHTML;
-  }
+  // ref: number | any;
+
+  // onGameStarted(eventData: any){
+  //   console.log(eventData.target.innerHTML);
+  //   this.ref = eventData.target.innerHTML;
+  // }
 
 }
