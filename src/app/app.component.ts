@@ -114,8 +114,11 @@ export class AppComponent {
   }
 
 
-
-  onGameStarted(eventData: any){
-    console.log(eventData.target.innerHTML);
+  onIntervalFired(firedNumber: number) {
+    console.log(firedNumber);
   }
+
+  // onGameStarted(eventData: any){
+  //   console.log(eventData.target.innerHTML);
+  // }
 }
