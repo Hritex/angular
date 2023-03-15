@@ -16,11 +16,15 @@ export class GameComponent {
     // console.log('Count is ' + this.cnt);
   }
 
-  setIntervl() {
+  setIntervl(): any{
     setInterval(() => this.startGame(), 1000);
     this.gameStarted.emit({
       count: this.cnt
     });
+  }
+
+  stopIntervl(){
+    clearInterval(this.setIntervl());
   }
 
 
